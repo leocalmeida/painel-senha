@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css";
 
 export default function App() {
   const [contador, setContador] = useState(0);
@@ -20,11 +21,26 @@ export default function App() {
   }
 
   return (
-    <div>
-      <h1> {contador} </h1>
-      <input type="button" value="+" onClick={handleIncrease} />
-      <input type="button" value="-" onClick={handleDecrease} />
-      <input type="button" value="Reset" onClick={() => setContador(0)} />
+    <div className="container">
+      <div className="numero">
+        <h1> {contador} </h1>
+      </div>
+
+      <div className="botoes">
+        <input type="button" value="+" onClick={handleIncrease} />
+        <input
+          className="input-ml"
+          type="button"
+          value="-"
+          onClick={handleDecrease}
+        />
+        <input
+          className="input-ml"
+          type="button"
+          value="Reset"
+          onClick={() => setContador(0)}
+        />
+      </div>
     </div>
   );
 }
