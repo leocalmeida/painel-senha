@@ -32,7 +32,7 @@
 }
 .botoes input:hover {
   transition: 0.3s;
-  opacity: 90%;
+  opacity: 0.9;
 }
 
 .numero {
